@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,220 @@
 </head>
 
 <body>
+    <!-- NavBar Section  -->
+    <header>
+        <div class="navbar bg-base-300">
+            <div class="flex-1">
+                <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+            </div>
+            <div class="flex-none gap-2">
+                <div class="form-control">
+                    <input type="text" placeholder="Search" class="input input-bordered" />
+                </div>
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img src="https://picsum.photos/500/300?random=2" />
+                        </div>
+                    </label>
+                    <ul tabindex="0"
+                        class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                        <li>
+                            <a class="justify-between">
+                                Profile
+                                <span class="badge">New</span>
+                            </a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="mx-8 ">
+
+        <!-- Shopping Card Section -->
+        <div class="product-details w-full md:w-[60%] lg:w-[60%] mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Coffee- First Card -->
+            <div class="card card-compact w-full bg-base-200 shadow-xl ">
+                <figure>
+                    <img class="w-full h-56" src="./img/coffee.jpg" alt="Coffee JS" />
+                </figure>
+                <div class="card-body">
+
+                    <h2 class="card-title">Coffee JS</h2>
+
+                    <p>Paragraph Section For Shopping Card Description.</p>
+
+                    <p>Price: $
+                        <Span>100</Span>
+                    </p>
+
+                    <p>Quantity:
+                        <span>5</span>
+                    </p>
+
+                    <div class="card-actions justify-end">
+
+                        <button class="btn btn-primary">Add To Card</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Panda - Second Card  -->
+            <div class="card card-compact w-full bg-base-200 shadow-xl ">
+                <figure>
+                    <img class="w-full h-56" src="./img/panda.png" alt="Panda JS" />
+                </figure>
+                <div class="card-body">
+
+                    <h2 class="card-title">Panda JS</h2>
+
+                    <p>Paragraph Section For Shopping Card Description.</p>
+
+                    <p>Price: $
+                        <Span>250</Span>
+                    </p>
+
+                    <p>Quantity:
+                        <span>10</span>
+                    </p>
+
+                    <div class="card-actions justify-end">
+
+                        <button class="btn btn-primary">Add To Card</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Heart - Third Card  -->
+            <div class="card card-compact w-full bg-base-200 shadow-xl ">
+                <figure>
+                    <img class="w-full h-56" src="./img/heart_js.jpg" alt="Heart JS" />
+                </figure>
+                <div class="card-body">
+
+                    <h2 class="card-title">Heart JS</h2>
+
+                    <p>Paragraph Section For Shopping Card Description.</p>
+
+                    <p>Price: $
+                        <Span>300</Span>
+                    </p>
+
+                    <p>Quantity:
+                        <span>30</span>
+                    </p>
+
+                    <div class="card-actions justify-end">
+
+                        <button class="btn btn-primary">Add To Card</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Umbrella -Forth Card  -->
+            <div class="card card-compact w-full bg-base-200 shadow-xl ">
+                <figure>
+                    <img class="w-full h-56" src="./img/umbrella.png" alt="Umbrella JS" />
+                </figure>
+                <div class="card-body">
+
+                    <h2 class="card-title">Umbrella JS</h2>
+
+                    <p>Paragraph Section For Shopping Card Description.</p>
+
+                    <p>Price: $
+                        <Span>500</Span>
+                    </p>
+
+                    <p>Quantity:
+                        <span>10</span>
+                    </p>
+
+                    <div class="card-actions justify-end">
+
+                        <button class="btn btn-primary">Add To Card</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- VUE - Fifth Card  -->
+            <div class="card card-compact w-full bg-base-200 shadow-xl ">
+                <figure>
+                    <img class="w-full h-56" src="./img/vue-js.jpg" alt="VUE JS" />
+                </figure>
+                <div class="card-body">
+
+                    <h2 class="card-title">VUE JS</h2>
+
+                    <p>Paragraph Section For Shopping Card Description.</p>
+
+                    <p>Price: $
+                        <Span>10</Span>
+                    </p>
+
+                    <p>Quantity:
+                        <span>2</span>
+                    </p>
+
+                    <div class="card-actions justify-end">
+
+                        <button class="btn btn-primary">Add To Card</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Code - Last Card  -->
+            <div class="card card-compact w-full bg-base-200 shadow-xl ">
+                <figure>
+                    <img class="w-full h-56" src="./img/code.png" alt="Input JS" />
+                </figure>
+                <div class="card-body">
+
+                    <h2 class="card-title">Input JS</h2>
+
+                    <p>Paragraph Section For Shopping Card Description.</p>
+
+                    <!-- Price Input Field. -->
+                    <input type="text" id="price-input-field" placeholder="Price : "
+                        class="input input-bordered input-sm w-[80%] max-w-xs " />
+
+                    <!-- Quantity Input Field.  -->
+                    <input type="text" id="quantity-input-field" placeholder="Quantity : "
+                        class="input input-bordered input-sm w-[80%] max-w-xs " />
+
+                    <div class="card-actions justify-end">
+
+                        <button class="btn btn-primary">Add To Card</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Calculation Section -->
+        <div></div>
+    </section>
+
 
     <!-- Connected JS File -->
     <script src="./index.js"></script>
