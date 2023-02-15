@@ -31,3 +31,43 @@ document.getElementById('btn-coffee-card').addEventListener('click', function ()
 });
 
 
+
+// Panda JS - Second Card
+
+document.getElementById('btn-panda-card').addEventListener('click', function(){
+
+});
+
+
+
+
+// Heart JS - Third Card
+
+document.getElementById('btn-heart-card').addEventListener('click', function(){
+
+});
+
+
+
+// Umbrella JS - Forth Card
+
+document.getElementById('btn-umbrella-card').addEventListener('click', function(){
+
+});
+
+
+
+// VUE JS - Fifth Card
+
+document.getElementById('btn-vue-card').addEventListener('click', function(){
+
+});
+
+
+
+// Input JS - Last Card
+
+document.getElementById('btn-input-card').addEventListener('click', function(){
+
+});
+
