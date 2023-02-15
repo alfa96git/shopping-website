@@ -28,4 +28,6 @@ document.getElementById('btn-coffee-card').addEventListener('click', function ()
 
     ProductValueContainer.appendChild(tr);
 
-})
+});
+
+
