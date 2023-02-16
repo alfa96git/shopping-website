@@ -1,6 +1,10 @@
+
+
+let serial = 0;
+
 // Coffee Js - first Card
 document.getElementById('btn-coffee-card').addEventListener('click', function () {
-
+    serial += 1;
     const cardName = document.getElementById('coffee-card-Name').innerText;
     const cardPrice = document.getElementById('coffee-Price').innerText;
 
@@ -24,7 +28,7 @@ document.getElementById('btn-coffee-card').addEventListener('click', function ()
     // `;
     // productValueContainer.appendChild(tr);
 
-    setProductValueOnContainerUsingData(cardName, cardPrice, cardQuantity, totalPrice);
+    setProductValueOnContainerUsingData(serial, cardName, cardPrice, cardQuantity, totalPrice);
 
 });
 
@@ -32,7 +36,7 @@ document.getElementById('btn-coffee-card').addEventListener('click', function ()
 
 // Panda JS - Second Card
 document.getElementById('btn-panda-card').addEventListener('click', function () {
-
+    serial += 1;
     const cardName = document.getElementById('panda-card-Name').innerText;
     const cardPrice = document.getElementById('panda-Price').innerText;
     const cardQuantity = document.getElementById('panda-Quantity').innerText;
@@ -56,7 +60,7 @@ document.getElementById('btn-panda-card').addEventListener('click', function () 
     // `;
     // productValueContainer.appendChild(tr);
 
-    setProductValueOnContainerUsingData(cardName, cardPrice, cardQuantity, totalPrice);
+    setProductValueOnContainerUsingData(serial, cardName, cardPrice, cardQuantity, totalPrice);
 
 });
 
@@ -66,13 +70,16 @@ document.getElementById('btn-panda-card').addEventListener('click', function () 
 // Heart JS - Third Card
 
 document.getElementById('btn-heart-card').addEventListener('click', function () {
-    const cardName = document.getElementById('heart-card-Name').innerText;
-    const cardPrice = document.getElementById('heart-Price').innerText;
-    const cardQuantity = document.getElementById('heart-Quantity').innerText;
+    serial += 1;
+    // const cardName = document.getElementById('heart-card-Name').innerText;
+    // const cardPrice = document.getElementById('heart-Price').innerText;
+    // const cardQuantity = document.getElementById('heart-Quantity').innerText;
 
-    const totalPrice = parseInt(cardPrice) + parseInt(cardQuantity);
+    const productData = getProductDataUsingId('heart-card-Name', 'heart-Price', 'heart-Quantity');
 
-    setProductValueOnContainerUsingData(cardName, cardPrice, cardQuantity, totalPrice);
+    const totalPrice = parseInt(productData.cardPrice) + parseInt(productData.cardQuantity);
+
+    setProductValueOnContainerUsingData(serial, productData.cardName, productData.cardPrice, productData.cardQuantity, totalPrice);
 });
 
 
@@ -80,13 +87,13 @@ document.getElementById('btn-heart-card').addEventListener('click', function () 
 // Umbrella JS - Forth Card
 
 document.getElementById('btn-umbrella-card').addEventListener('click', function () {
-    const cardName = document.getElementById('umbrella-card-Name').innerText;
-    const cardPrice = document.getElementById('umbrella-Price').innerText;
-    const cardQuantity = document.getElementById('umbrella-Quantity').innerText;
+    serial += 1;
 
-    const totalPrice = parseInt(cardPrice) + parseInt(cardQuantity);
+    const productData = getProductDataUsingId('umbrella-card-Name', 'umbrella-Price', 'umbrella-Quantity');
 
-    setProductValueOnContainerUsingData(cardName, cardPrice, cardQuantity, totalPrice);
+    const totalPrice = parseInt(productData.cardPrice) + parseInt(productData.cardQuantity);
+
+    setProductValueOnContainerUsingData(serial, productData.cardName, productData.cardPrice, productData.cardQuantity, totalPrice);
 
 });
 
@@ -95,13 +102,12 @@ document.getElementById('btn-umbrella-card').addEventListener('click', function 
 // VUE JS - Fifth Card
 
 document.getElementById('btn-vue-card').addEventListener('click', function () {
-    const cardName = document.getElementById('vue-card-Name').innerText;
-    const cardPrice = document.getElementById('vue-Price').innerText;
-    const cardQuantity = document.getElementById('vue-Quantity').innerText;
+    serial += 1;
+    const productData = getProductDataUsingId('vue-card-Name', 'vue-Price', 'vue-Quantity');
 
-    const totalPrice = parseInt(cardPrice) + parseInt(cardQuantity);
+    const totalPrice = parseInt(productData.cardPrice) + parseInt(productData.cardQuantity);
 
-    setProductValueOnContainerUsingData(cardName, cardPrice, cardQuantity, totalPrice);
+    setProductValueOnContainerUsingData(serial, productData.cardName, productData.cardPrice, productData.cardQuantity, totalPrice);
 
 });
 
@@ -110,6 +116,7 @@ document.getElementById('btn-vue-card').addEventListener('click', function () {
 // Input JS - Last Card
 
 document.getElementById('btn-input-card').addEventListener('click', function () {
+    serial += 1;
 
 });
 

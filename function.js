@@ -1,9 +1,9 @@
 //Get Data From Card And Put it On Container table.
-function setProductValueOnContainerUsingData(productName, productPrice, productQuantity, totalProductPrice) {
+function setProductValueOnContainerUsingData(serialNumber, productName, productPrice, productQuantity, totalProductPrice) {
     const productValueContainer = document.getElementById('table-container');
     const tr = document.createElement('tr');
     tr.innerHTML = `
-    <td> ${2} </td>
+    <td> ${serialNumber} </td>
     <td> ${productName} </td>
     <td> ${productPrice} </td>
     <td> ${productQuantity} </td>
@@ -20,12 +20,19 @@ function setProductValueOnContainerUsingData(productName, productPrice, productQ
 
 
 
-//  Not work properly right now.
+// Get Product value from card using ID
+function getProductDataUsingId(productCardName, productCardPrice, productCardQuantity) {
 
-// function getProductDataValueUsingId(productCardName,productCardPrice, productCardQuantity){
-//     const cardName = document.getElementById(productCardName).innerText;
-//     const cardPrice = document.getElementById(productCardPrice).innerText;
-//     const cardQuantity = document.getElementById(productCardQuantity).innerText;
-// console.log(cardName,cardPrice,cardQuantity);
+    const cardName = document.getElementById(productCardName).innerText;
+    const cardPrice = document.getElementById(productCardPrice).innerText;
+    const cardQuantity = document.getElementById(productCardQuantity).innerText;
 
-// }
+    const pData = {
+        cardName: cardName,
+        cardPrice: cardPrice,
+        cardQuantity: cardQuantity,
+    };
+
+    return pData;
+
+}
