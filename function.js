@@ -17,9 +17,6 @@ function setProductValueOnContainerUsingData(serialNumber, productName, productP
 
 
 
-
-
-
 // Get Product value from card using ID
 function getProductDataUsingId(productCardName, productCardPrice, productCardQuantity) {
 
@@ -32,17 +29,19 @@ function getProductDataUsingId(productCardName, productCardPrice, productCardQua
         cardPrice: cardPrice,
         cardQuantity: cardQuantity,
     };
-
     return pData;
+}
 
+
+// Count total selected product number.
+function countTotalProductNumber(totalProductIdName, serialNumber){
+    document.getElementById(totalProductIdName).innerText = serialNumber;
 }
 
 
 
 
-
 // Disable After Clicking the Button.
-
 function disableButtonUsingButtonId (buttonId){
     document.getElementById(buttonId).setAttribute('disabled', true);
 }

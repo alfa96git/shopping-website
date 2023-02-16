@@ -28,6 +28,8 @@ document.getElementById('btn-coffee-card').addEventListener('click', function ()
     // `;
     // productValueContainer.appendChild(tr);
 
+    countTotalProductNumber('total-product', serial);
+    
     setProductValueOnContainerUsingData(serial, cardName, cardPrice, cardQuantity, totalPrice);
 
     disableButtonUsingButtonId('btn-coffee-card');
@@ -62,6 +64,9 @@ document.getElementById('btn-panda-card').addEventListener('click', function () 
     // `;
     // productValueContainer.appendChild(tr);
 
+
+    countTotalProductNumber('total-product', serial);
+
     setProductValueOnContainerUsingData(serial, cardName, cardPrice, cardQuantity, totalPrice);
     disableButtonUsingButtonId('btn-panda-card');
 });
@@ -81,10 +86,14 @@ document.getElementById('btn-heart-card').addEventListener('click', function () 
 
     const totalPrice = parseInt(productData.cardPrice) + parseInt(productData.cardQuantity);
 
+
+    countTotalProductNumber('total-product', serial);
+
     setProductValueOnContainerUsingData(serial, productData.cardName, productData.cardPrice, productData.cardQuantity, totalPrice);
 
     disableButtonUsingButtonId('btn-heart-card');
 });
+
 
 
 
@@ -96,6 +105,8 @@ document.getElementById('btn-umbrella-card').addEventListener('click', function 
     const productData = getProductDataUsingId('umbrella-card-Name', 'umbrella-Price', 'umbrella-Quantity');
 
     const totalPrice = parseInt(productData.cardPrice) + parseInt(productData.cardQuantity);
+
+    countTotalProductNumber('total-product', serial);
 
     setProductValueOnContainerUsingData(serial, productData.cardName, productData.cardPrice, productData.cardQuantity, totalPrice);
 
@@ -112,6 +123,8 @@ document.getElementById('btn-vue-card').addEventListener('click', function () {
     const productData = getProductDataUsingId('vue-card-Name', 'vue-Price', 'vue-Quantity');
 
     const totalPrice = parseInt(productData.cardPrice) + parseInt(productData.cardQuantity);
+
+    countTotalProductNumber('total-product', serial);
 
     setProductValueOnContainerUsingData(serial, productData.cardName, productData.cardPrice, productData.cardQuantity, totalPrice);
 
@@ -133,6 +146,8 @@ document.getElementById('btn-input-card').addEventListener('click', function () 
        return alert(" Please, Input Valid Number");
     } 
     const totalProductPrice = parseInt(productPrice) + parseInt(productQuantity);
+
+    countTotalProductNumber('total-product', serial);
 
     setProductValueOnContainerUsingData(serial, productName, productPrice, productQuantity, totalProductPrice);
 
