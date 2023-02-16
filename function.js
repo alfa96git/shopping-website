@@ -36,3 +36,13 @@ function getProductDataUsingId(productCardName, productCardPrice, productCardQua
     return pData;
 
 }
+
+
+
+
+
+// Disable After Clicking the Button.
+
+function disableButtonUsingButtonId (buttonId){
+    document.getElementById(buttonId).setAttribute('disabled', true);
+}

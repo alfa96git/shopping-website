@@ -30,6 +30,8 @@ document.getElementById('btn-coffee-card').addEventListener('click', function ()
 
     setProductValueOnContainerUsingData(serial, cardName, cardPrice, cardQuantity, totalPrice);
 
+    disableButtonUsingButtonId('btn-coffee-card');
+
 });
 
 
@@ -61,7 +63,7 @@ document.getElementById('btn-panda-card').addEventListener('click', function () 
     // productValueContainer.appendChild(tr);
 
     setProductValueOnContainerUsingData(serial, cardName, cardPrice, cardQuantity, totalPrice);
-
+    disableButtonUsingButtonId('btn-panda-card');
 });
 
 
@@ -80,6 +82,8 @@ document.getElementById('btn-heart-card').addEventListener('click', function () 
     const totalPrice = parseInt(productData.cardPrice) + parseInt(productData.cardQuantity);
 
     setProductValueOnContainerUsingData(serial, productData.cardName, productData.cardPrice, productData.cardQuantity, totalPrice);
+
+    disableButtonUsingButtonId('btn-heart-card');
 });
 
 
@@ -95,6 +99,8 @@ document.getElementById('btn-umbrella-card').addEventListener('click', function 
 
     setProductValueOnContainerUsingData(serial, productData.cardName, productData.cardPrice, productData.cardQuantity, totalPrice);
 
+    disableButtonUsingButtonId('btn-umbrella-card');
+
 });
 
 
@@ -109,6 +115,8 @@ document.getElementById('btn-vue-card').addEventListener('click', function () {
 
     setProductValueOnContainerUsingData(serial, productData.cardName, productData.cardPrice, productData.cardQuantity, totalPrice);
 
+    disableButtonUsingButtonId('btn-vue-card');
+
 });
 
 
@@ -117,6 +125,18 @@ document.getElementById('btn-vue-card').addEventListener('click', function () {
 
 document.getElementById('btn-input-card').addEventListener('click', function () {
     serial += 1;
+    const productName = document.getElementById('input-card-Name').innerText;
+    const productPrice = document.getElementById('price-input-field').value;
+    const productQuantity = document.getElementById('quantity-input-field').value;
+
+    if(productPrice == "" || productPrice <=0 || productQuantity == "" || productQuantity <=0){
+       return alert(" Please, Input Valid Number");
+    } 
+    const totalProductPrice = parseInt(productPrice) + parseInt(productQuantity);
+
+    setProductValueOnContainerUsingData(serial, productName, productPrice, productQuantity, totalProductPrice);
+
+    disableButtonUsingButtonId('btn-input-card');
 
 });
 
